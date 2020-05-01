@@ -1,4 +1,4 @@
-package com.JavaPrograms;
+package com.JavaPrograms.legagyProgram;
 
 public class NumberSwap {
 
