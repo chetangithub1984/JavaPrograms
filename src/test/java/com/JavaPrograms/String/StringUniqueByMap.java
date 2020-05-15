@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class StringUniqueByMap {
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         String blogname = "howtodoinjava dot com";
 
@@ -16,10 +16,9 @@ public class StringUniqueByMap {
         for (char c : chars) {
 
             if (map.containsKey(c)) {
-                int count = map.get(c);
-                map.put(c, ++count);
+                map.put(c, map.get(c)+1);
             } else {
-                if ( c != ' ') {
+                if (c != ' ') {
                     map.put(c, 1);
                 }
             }
@@ -27,9 +26,9 @@ public class StringUniqueByMap {
         }
 
         for (char c : map.keySet()) {
-           // if (map.get(c) > 1) {
-                System.out.println(c + " " + map.get(c));
-           // }
+            // if (map.get(c) > 1) {
+            System.out.println(c + " " + map.get(c));
+            // }
         }
     }
 }
